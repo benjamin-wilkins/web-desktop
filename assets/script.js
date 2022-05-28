@@ -5,6 +5,13 @@ var desktop_icons = [
     "icon": "info-circle-fill",
     "width": 350,
     "height": 200
+  },
+  {
+    "page": "clock.html",
+    "name": "Clock",
+    "icon": "clock-fill",
+    "height": 400,
+    "width": 400
   }
 ];
 
