@@ -2,9 +2,14 @@ var windows = ["welcome.html"];
 
 desktop = document.getElementById("desktop");
 
-for (let i=0; i<windows.length; i++) {
-  createWindow(i, windows[i])
+for (i=0; i<windows.length; i++) {
+  createWindow(i, windows[i]);
 };
+
+function windowButton(name) {
+  createWindow(i, name);
+  i++;
+}
 
 function createWindow(id, name) {
   var window_container = `
