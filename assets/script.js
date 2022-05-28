@@ -54,7 +54,7 @@ function createWindow(id, name, width, height) {
     <div id="window${id}header" style="cursor: move" class="bg-dark rounded text-center">
       <span class="text-light">Window 1</span>
     </div>
-    <iframe id="iframe${id}" style="height: calc(350px-2rem); width:100%" src="/web-desktop/windows/${name}"></iframe>
+    <iframe id="iframe${id}" style="height: calc(${height}px-2rem); width:100%" src="/web-desktop/windows/${name}"></iframe>
   </div>
   `;
   
