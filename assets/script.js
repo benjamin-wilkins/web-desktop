@@ -3,15 +3,15 @@ var desktop_icons = [
     "page": "welcome.html",
     "name": "Welcome",
     "icon": "info-circle-fill",
-    "width": 350,
-    "height": 200
+    "width": "350",
+    "height": "200"
   },
   {
     "page": "clock.html",
     "name": "Clock",
     "icon": "clock-fill",
-    "height": 400,
-    "width": 400
+    "width": "400",
+    "height": "400"
   }
 ];
 
@@ -30,7 +30,7 @@ for (n=0; n<desktop_icons.length; n++) {
 
 i = 0;
 
-windowButton("welcome.html", 350, 200);
+windowButton("welcome.html", "350", "200");
 
 function windowButton(name) {
   createWindow(i, name);
