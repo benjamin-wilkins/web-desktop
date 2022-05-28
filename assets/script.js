@@ -29,7 +29,8 @@ function windowButton(name) {
 };
 
 function createWindow(id, name) {
-  var window_container = `
+  var window_container = document.createElement("div")
+  var draggable_window = `
   <div id="window${id}" style="position: absolute; width: 350px; height: 200px; left:50%; top:50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white">
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
@@ -41,7 +42,8 @@ function createWindow(id, name) {
   </div>
   `;
   
-  desktop.innerHTML += window_container;
+  window_container.innerHTML += draggable_window;
+  desktop.appendElement(window_container)
   document.getElementById(`iframe${id}`).onload = function(){
     document.getElementById(`window${id}header`).innerHTML = `<span class="text-light">${document.getElementById("iframe"+id).contentDocument.title}</span>`
   };
