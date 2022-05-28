@@ -28,10 +28,17 @@ function windowButton(name) {
   i++;
 };
 
+function bringToTop(num) {
+  for (n=0; n<i; n++) {
+    document.getElementById(`window${n}`).getAttributeNode("z-index").value = 100;
+  };
+  document.getElementById(`window${num}`).getAttributeNode("z-index").value = 105;
+};
+
 function createWindow(id, name) {
   var window_container = document.createElement("div")
   var draggable_window = `
-  <div id="window${id}" style="position: absolute; width: 350px; height: 200px; left:50%; top:50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white">
+  <div id="window${id}" style="position: absolute; width: 350px; height: 200px; left:50%; top:50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white" onclick="bringToTop(${i})">
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
       </button>
