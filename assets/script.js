@@ -11,8 +11,7 @@ desktop = document.getElementById("desktop");
 for (n=0; n<desktop_icons.length; n++) {
   button = `
   <button type="button" class="btb btn-outline-dark" onclick="windowButton(${desktop_icons[n]["page"]})">
-    ${desktop_icons[n]["icon"]}
-    <br>
+    <i class="bi-${desktop_icons[n]["icon"]}"></i>
     ${desktop_icons[n]["name"]}
   </button>
   `;
