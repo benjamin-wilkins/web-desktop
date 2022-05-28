@@ -30,9 +30,9 @@ function windowButton(name) {
 
 function bringToTop(num) {
   for (n=0; n<i; n++) {
-    document.getElementById(`window${n}`).getAttributeNode("z-index").value = 100;
+    document.getElementById(`window${n}`).style.zIndex = 100;
   };
-  document.getElementById(`window${num}`).getAttributeNode("z-index").value = 105;
+  document.getElementById(`window${num}`).style.zIndex = 105;
 };
 
 function createWindow(id, name) {
