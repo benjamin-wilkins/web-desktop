@@ -14,26 +14,26 @@
     <canvas id="clock" width="100%" height="calc(450px-4rem)"></canvas>
     <p id="digital"></p>
     <script>
-      digital = document.getElementById("digital")
-      analogue = document.getElementById("clock")
+      digital = document.getElementById("digital");
+      analogue = document.getElementById("clock");
 
-      ctx = analogue.getContext("2d")
-      var radius = analogue.height / 2
-      ctx.translate(radius, radius)
-      radius = radius * 0.9
+      ctx = analogue.getContext("2d");
+      var radius = analogue.height / 2;
+      ctx.translate(radius, radius);
+      radius = radius * 0.9;
 
-      update()
+      update();
 
-      setInterval(update, 1000)
+      setInterval(update, 1000);
 
       function update () {
-        const datetime = Date()
-        digital.innerText = datetime.toString()
+        const datetime = Date();
+        digital.innerText = datetime.toString();
 
-        ctx.arc(0, 0, radius, 0 , 2 * Math.PI)
-        ctx.fillStyle = "white"
-        ctx.fill()
-      }
+        ctx.arc(0, 0, radius, 0 , 2 * Math.PI);
+        ctx.fillStyle = "black";
+        ctx.fill();
+      };
     </script>
   </body>
 </html>
