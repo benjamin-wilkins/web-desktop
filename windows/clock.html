@@ -38,6 +38,7 @@
         for (i=0; i<12; i++) {
           angle = i * Math.PI / 6;
           ctx.moveTo(Math.sin(angle)*radius*0.8, Math.cos(angle)*radius*0.8)
+          ctx.beginPath();
           ctx.arc(Math.sin(angle)*radius*0.8, Math.cos(angle)*radius*0.8, radius/12, 0, 2*Math.PI);
           ctx.stroke();
         };
