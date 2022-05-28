@@ -11,7 +11,7 @@ for (let i=0; i<windows.length; i++) {
     <div id="window${i}header" style="cursor: move" class="bg-dark rounded text-center">
       <span class="text-light">Window 1</span>
     </div>
-    <iframe id="iframe${i}" style="height: calc(350px-2rem); width:100%" src="/windows/${windows[i]}"></iframe>
+    <iframe id="iframe${i}" style="height: calc(350px-2rem); width:100%" src="/web-desktop/windows/${windows[i]}"></iframe>
   </div>
   `;
   
