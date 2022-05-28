@@ -48,13 +48,15 @@ function createWindow(id, name, width, height) {
   var window_container = document.createElement("div")
   var draggable_window = `
   <div id="window${id}" style="position: absolute; width: ${width}px; height: ${height}px; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white" onclick="bringToTop(${i})">
-    <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+    <div>
+      <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
       </button>
-    <div id="window${id}header" style="cursor: move" class="bg-dark rounded text-center">
-      <span class="text-light">Window 1</span>
+      <div id="window${id}header" style="cursor: move" class="bg-dark rounded text-center">
+        <span class="text-light">Window 1</span>
+      </div>
     </div>
-    <iframe id="iframe${id}" style="height: calc(${height}px-2rem); width:100%" src="/web-desktop/windows/${name}"></iframe>
+    <iframe id="iframe${id}" style="height: calc(${height-50}); width:100%" src="/web-desktop/windows/${name}"></iframe>
   </div>
   `;
   
