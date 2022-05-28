@@ -1,10 +1,27 @@
-var windows = ["welcome.html"];
+var desktop_icons = [
+  {
+    "page": "welcome.html",
+    "name": "Welcome",
+    "icon": "welcome-icon-fill"
+  }
+];
 
 desktop = document.getElementById("desktop");
 
-for (i=0; i<windows.length; i++) {
-  createWindow(i, windows[i]);
+for (n=0; n<desktop_icons.length; n++) {
+  button = `
+  <button type="button" class="btb btn-outline-dark" onclick="windowButton(${desktop_icons[n]["page"]})">
+    ${desktop_icons[n]["icon"]}
+    <br>
+    ${desktop_icons[n]["name"]}
+  </button>
+  `;
+  desktop.innerHTML += button;
 };
+
+i = 0
+
+windowButton("welcome.html")
 
 function windowButton(name) {
   createWindow(i, name);
