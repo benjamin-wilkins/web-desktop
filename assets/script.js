@@ -29,6 +29,10 @@ function createWindow(id, name) {
     document.getElementById(`window${id}header`).innerHTML = `<span class="text-light">${document.getElementById("iframe"+id).contentDocument.title}</span>`
   };
   dragElement(document.getElementById(`window${id}`));
+
+  for (n=0; n<id; n++) {
+    dragElement(document.getElementById(`window${n}`));
+  }
 }
 
 function dragElement(elmnt) {
