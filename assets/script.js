@@ -43,7 +43,7 @@ function createWindow(id, name) {
   `;
   
   window_container.innerHTML += draggable_window;
-  desktop.appendElement(window_container)
+  desktop.appendChild(window_container)
   document.getElementById(`iframe${id}`).onload = function(){
     document.getElementById(`window${id}header`).innerHTML = `<span class="text-light">${document.getElementById("iframe"+id).contentDocument.title}</span>`
   };
