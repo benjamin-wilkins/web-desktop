@@ -2,7 +2,9 @@ var desktop_icons = [
   {
     "page": "welcome.html",
     "name": "Welcome",
-    "icon": "info-circle-fill"
+    "icon": "info-circle-fill",
+    "width": 350,
+    "height": 200
   }
 ];
 
@@ -10,7 +12,7 @@ desktop = document.getElementById("desktop");
 
 for (n=0; n<desktop_icons.length; n++) {
   button = `
-  <button type="button" class="btn btn-outline-dark m-4" onclick="windowButton('${desktop_icons[n]["page"]}')">
+  <button type="button" class="btn btn-outline-dark m-4" onclick="windowButton('${desktop_icons[n]["page"]}', '${desktop_icons[n]["width"]}', '${desktop_icons[n]["height"]}')">
     <i class="bi-${desktop_icons[n]["icon"]}" style="font-size: 3rem"></i>
     <br>
     ${desktop_icons[n]["name"]}
@@ -21,7 +23,7 @@ for (n=0; n<desktop_icons.length; n++) {
 
 i = 0;
 
-windowButton("welcome.html");
+windowButton("welcome.html", 350, 200);
 
 function windowButton(name) {
   createWindow(i, name);
@@ -35,10 +37,10 @@ function bringToTop(num) {
   document.getElementById(`window${num}`).style.zIndex = 105;
 };
 
-function createWindow(id, name) {
+function createWindow(id, name, width, height) {
   var window_container = document.createElement("div")
   var draggable_window = `
-  <div id="window${id}" style="position: absolute; width: 350px; height: 200px; left:50%; top:50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white" onclick="bringToTop(${i})">
+  <div id="window${id}" style="position: absolute; width: ${width}px; height: ${height}px; left:50%; top:50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white" onclick="bringToTop(${i})">
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
       </button>
