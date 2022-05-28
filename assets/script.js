@@ -3,24 +3,28 @@ var windows = ["welcome.html"];
 desktop = document.getElementById("desktop");
 
 for (let i=0; i<windows.length; i++) {
+  createWindow(i, windows[i])
+};
+
+function createWindow(id, name) {
   var window_container = `
-  <div id="window${i}" style="position: absolute; width: 350px; height: 200px" class="shadow rounded alert alert-dismissible fade show bg-white">
+  <div id="window${id}" style="position: absolute; width: 350px; height: 200px" class="shadow rounded alert alert-dismissible fade show bg-white">
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
       </button>
-    <div id="window${i}header" style="cursor: move" class="bg-dark rounded text-center">
+    <div id="window${id}header" style="cursor: move" class="bg-dark rounded text-center">
       <span class="text-light">Window 1</span>
     </div>
-    <iframe id="iframe${i}" style="height: calc(350px-2rem); width:100%" src="/web-desktop/windows/${windows[i]}"></iframe>
+    <iframe id="iframe${id}" style="height: calc(350px-2rem); width:100%" src="/web-desktop/windows/${name}"></iframe>
   </div>
   `;
   
   desktop.innerHTML += window_container;
-  document.getElementById(`iframe${i}`).onload = function(){
-    document.getElementById(`window${i}header`).innerHTML = `<span class="text-light">${document.getElementById("iframe"+i).contentDocument.title}</span>`
+  document.getElementById(`iframe${id}`).onload = function(){
+    document.getElementById(`window${id}header`).innerHTML = `<span class="text-light">${document.getElementById("iframe"+id).contentDocument.title}</span>`
   };
-  dragElement(document.getElementById(`window${i}`));
-};
+  dragElement(document.getElementById(`window${id}`));
+}
 
 function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
