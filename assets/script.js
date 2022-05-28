@@ -30,7 +30,7 @@ function windowButton(name) {
 
 function createWindow(id, name) {
   var window_container = `
-  <div id="window${id}" style="position: absolute; width: 350px; height: 200px" class="shadow rounded alert alert-dismissible fade show bg-white">
+  <div id="window${id}" style="position: absolute; width: 350px; height: 200px; left:calc(50%-175px); top:calc(50%-100px)" class="shadow rounded alert alert-dismissible fade show bg-white">
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
       </button>
