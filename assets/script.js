@@ -2,7 +2,7 @@ var desktop_icons = [
   {
     "page": "welcome.html",
     "name": "Welcome",
-    "icon": "welcome-icon-fill"
+    "icon": "info-circle-fill"
   }
 ];
 
