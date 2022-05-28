@@ -32,8 +32,8 @@ i = 0;
 
 windowButton("welcome.html", "350", "200");
 
-function windowButton(name) {
-  createWindow(i, name);
+function windowButton(name, width, height) {
+  createWindow(i, name, width, height);
   i++;
 };
 
@@ -47,7 +47,7 @@ function bringToTop(num) {
 function createWindow(id, name, width, height) {
   var window_container = document.createElement("div")
   var draggable_window = `
-  <div id="window${id}" style="position: absolute; width: ${width}px; height: ${height}px; left:50%; top:50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white" onclick="bringToTop(${i})">
+  <div id="window${id}" style="position: absolute; width: ${width}px; height: ${height}px; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%)" class="shadow rounded alert alert-dismissible fade show bg-white" onclick="bringToTop(${i})">
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
       </button>
