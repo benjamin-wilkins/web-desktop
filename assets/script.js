@@ -11,7 +11,7 @@ var desktop_icons = [
     "name": "Clock",
     "icon": "clock-fill",
     "width": "400",
-    "height": "400"
+    "height": "450"
   }
 ];
 
