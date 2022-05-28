@@ -11,5 +11,19 @@
     <title>Clock</title>
   </head>
   <body>
+    <p id="text"></p>
+    <div id="clock"></div>
+    <script>
+      text = document.getElementById("text")
+
+      update()
+
+      setInterval(update, 10)
+
+      function update () {
+        const datetime = Date()
+        text.innerText = datetime.toString()
+      }
+    </script>
   </body>
 </html>
